@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AH-YouTube Thumbnail Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Thumbnail Downloader</h1>
+        <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL" />
+        <select id="resolution">
+            <option value="default">Default</option>
+            <option value="mqdefault">Medium</option>
+            <option value="hqdefault">High</option>
+            <option value="sddefault">Standard</option>
+            <option value="maxresdefault">Max Resolution</option>
+        </select>
+        <button id="fetchThumbnail">Get Thumbnail</button>
+        <button id="clearBtn">Clear</button>
+
+        <div id="loading" class="loading" style="display:none;">Loading...</div>
+
+        <div id="thumbnailContainer" class="thumbnail-container" style="display:none;">
+            <img id="thumbnail" alt="YouTube Thumbnail" />
+            <a id="downloadLink" class="download-btn" download>Download Thumbnail</a>
+        </div>
+
+        <div id="error" class="error-message" style="display:none;">Invalid YouTube URL. Please try again.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
